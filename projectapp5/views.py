@@ -13,3 +13,5 @@ def formfunction(request):
     return render(request,'form.html')    
 def carouselfunction(request):
     return render(request,'carousel.html')
+def modalfunction(request):
+    return render(request,'modal.html')
