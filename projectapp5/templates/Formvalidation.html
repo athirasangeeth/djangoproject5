@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <form action=""method="get">
+    <div style="height: 500px;width: 500px;background-color: rgb(103, 122, 116);">
+    <h1>Registration Page</h1>
+    <label> User Name</label>
+    <input type="text" id="username" onkeyup="return validation()">
+    <label for="" id="username_error"></label>
+    <br>
+    <label> First Name</label>
+    <input type="text" id="firstname" onkeyup="return validation()">
+    <label for="" id="firstname_error"></label>
+    <br>
+    <label> Last Name</label>
+    <input type="text" id="lastname" onkeyup="return validation()">
+    <label for="" id="lastname_error"></label>
+    <br>
+    <label>Password</label>
+    <input type="text" id="Password" onkeyup="return validation()">
+    <label for="" id="password_error"></label>
+    <br>
+    <label>Confirm Password</label>
+    <input type="text" id="CPassword" onkeyup="return validation()">
+    <label for="" id="confirm password_error"></label>
+    <br>
+    <button onclick="return validation()">Sign up</button><br>
+</div>
+</form>
+</center>
+<script>
+    function validation(){
+        user=document.getElementById('username')
+        console.log(user)
+        pass=document.getElementById('password')
+        console.log(pass)
+        if(user.value == ""){
+            username.style.borderColor="red"
+            username_error.innerHTML="Please enter your username" -->
+            document.getElementById('username_error').innerHTML="Please enter your username"
+            username_error.style.color="red"
+            // document.getElementById('username').style.borderColor="red";
+            // username_error.style.color="red"
+            // username_error.style.display="block"
+        }
+        else{
+            username.style.borderColor="black"
+            username_error.style.display="block"
+        }
+        if(pass.value==""){
+            password.style.borderColor="red"
+            password_error.innerHTML="Please enter your password"
+            document.getElementById('password_error').innerHTML="Please enter your password"
+            username_error.style.color="red"
+        }
+    }
+            </script>
+</body>
+</html>

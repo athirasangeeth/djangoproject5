@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div id="div1">
+        <ul>
+            <li>Athira</li>
+            <li id="list2"><span>Akhil</span></li>
+            <li>Arun</li>
+        </ul>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ratione soluta maxime blanditiis ipsa. Aut alias sapiente fugiat necessitatibus ex ab velit, ut nulla quaerat. Mollitia architecto harum modi non?
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi asperiores provident recusandae, rerum atque non temporibus sed fugit reiciendis eveniet maiores explicabo dolor, cum, praesentium saepe doloribus autem dolore natus.
+        </p>
+    </div>
+    <div id="div2">Babtra</div>
+    <div id="div3">Kozhikode</div>
+    <button id="b1">click</button>
+    <script>
+        $(document).ready(function(){
+            $('#b1').click(function(){
+                // $('span').parents().css({"color":"red","border":"2px solid blue"})
+                // $('#div1').siblings().css({"background-color":"yellow"})
+                // $('#div1').children().css({"background-color":"green"})
+                $('li').last().css({"background-color":"grey"})
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palliandrome</title>
+</head>
+<body>
+    <label>Enter your word</label>
+    <input type="text" id="palom">
+    <button onclick="checkpalndrm()">click</button>
+    <input type="text" id="result">
+    <script>
+        function checkpalndrm(){
+            var word=document.getElementById('palom').value
+        lenword=word.length
+        console.log(lenword)
+        halfoflen=parseInt(lenword/2)
+        console.log(halfoflen)
+        j=lenword-1
+        for(i=0;i<halfoflen;i++){
+            while(j>=halfoflen){
+                if(word.charAt(i)==word.charAt){
+                    j--;
+                    flag=1
+                    continue
+                }
+                else{
+                    flag=0
+                    break
+                }
+            }
+        }
+        if(flag==0){
+            document.getElementById('result').value="string is not palliandrome"
+        }
+        else
+        document.getElementById('result').value="string is a palliandrome"
+        }
+    </script>
+</body>
+</html>

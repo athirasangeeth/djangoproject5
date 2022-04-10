@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .para{
+            color: rgb(192, 51, 51);
+            font-size: smaller;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" style="height: 700px;width: 600px;background-color: rgb(189, 164, 164);">
+    <p>heloo</p>
+    <p>welcome</p>
+    <p>kerala</p>
+    <img src="images/image2.jpeg" alt="">
+    </div>
+    <button id="b2">click</button>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique molestiae exercitationem amet. Eius, nobis minus! Earum, exercitationem tenetur voluptates modi in saepe laborum impedit ipsum officiis ipsam, ad sapiente vitae.</p>
+    <button id="b1">click</button>
+    <script>
+        $(document).ready(function(){
+            $('#b1').click(function(){
+                // alert($('#p1').html())
+                // $('#p1').html('Heloo Athira')
+                $('#p1').addClass('para')
+            })
+            $('#b2').click(function(){
+                // $('#div1').remove()
+                $('#div1').empty()
+
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factorial</title>
+</head>
+<body>
+    <center>
+        <div style="background-color: aqua; height: 400px; width: 400px;">
+        <h1>Factorial of a number</h1>
+        <label>Enter Number</label>
+        <input type="text" id="n"><br>
+        <button onclick="factorial()">factorial</button><br>
+        <label>Output</label>
+        <input type="text" id="Output">
+    </div>
+    </center>
+    <script>
+        function factorial()
+        {
+          num = Number(document.getElementById("n").value);
+          console.log(num)
+        if (n<0){
+            console.log('Factorial of negative number does not exist.');
+            document.getElementById('Output').value=num
+        } 
+        else if (n==0){
+            console.log('The factorial of number is 1');
+            document.getElementById('Output').value=1
+        }
+        else {
+    let fact = 1;
+    for (i = 1; i <= number; i++) {
+        fact *= i;
+    }
+    console.log(`The factorial of number is %d.);
+        }
+        }        
+    </script>
+</body>
+</html>

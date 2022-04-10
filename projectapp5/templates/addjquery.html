@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add numbers</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div style="height: 500px;width: 500px;background-color: rgb(214, 145, 197);">
+        <h2>Addition of two numbers</h2>
+        <br>
+    <label for="fno">First Number</label>
+    <input type="text" name="First Number" id="fnumber">
+    <br>
+    <label for="sno">Second Number</label>
+    <input type="text" name="Second Number" id="snumber">
+    <br>
+    <br>
+    <button id="add">Add</button>
+    <br>
+    <p id="result">is the sum of above two numbers</p>    
+</div>
+<script>
+        $(document).ready(function(){
+            $('#add').click(function(){
+               var fnumber=parseInt($('#fnumber').val());
+               var snumber=parseInt($('#snumber').val()); 
+                $("#result").text(fnumber+snumber);
+            });
+        });
+    </script>
+</body>
+</html>

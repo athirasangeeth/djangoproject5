@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <h3>fade in</h3>
+    <div id="div1" style="height: 100px;width: 100%; background-color: blue;display: none;"></div>
+    <button id="btn"> click</button>
+    <h3>fade out</h3>
+    <div id="div2" style="height: 100px;width: 100%; background-color: blue;display: none;"></div>
+    <button id="btn"> click</button>
+    <h3>fade To</h3>
+    <div id="div3" style="height: 100px;width: 100%; background-color: blue;display: none;"></div>
+    <button id="btn"> click</button>
+    <h3>fade Toggle</h3>
+    <div id="div4" style="height: 100px;width: 100%; background-color: blue;display: none;"></div>
+    <button id="btn"> click</button>
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+            $('#div1').fadeIn(4000)
+        })
+    })
+    $(document).ready(function(){
+        $('#btn').click(function(){
+            $('#div2').fadeOut(3000)
+        })
+    })
+    $(document).ready(function(){
+        $('#btn').click(function(){
+            $('#div4').fadeToggle()
+        })
+    })
+    </script>
+</body>
+</html>

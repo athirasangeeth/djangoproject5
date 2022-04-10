@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+    body{
+        background: url("https://tse1.mm.bing.net/th?id=OIP.dSyBt1r2Li7HlazlYMNP9gAAAA&pid=Api&P=0&w=222&h=166");        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        }
+        form{
+            background: linear-gradient(to right,rgb(236, 170, 208),rgb(135, 228, 180));
+            width:40%;
+            height: 300px;
+            font-family: 'Times New Roman', Times, serif;
+            padding-top: 10px;
+            margin-top: 50px;
+            margin-bottom: 400px;
+            border-radius: 20px;
+        }
+        input[type=submit]{
+            background-color: blue;
+            color: white;
+            width: 150px;
+            height: 30px;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-left: 40px;
+        }
+        input[type=reset]{
+            background-color: green;
+            color: white;
+            width:150px;
+            height: 30px;
+            border-radius: 10px
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <form action="submit">
+        <h2>Login Here</h2>
+        <label for="">Username</label>
+        <input type="text" id="Username" placeholder="Email" >
+        <label for="" id="username_error"></label><br><br>
+        <label for="">Password</label>
+        <input type="password" id="password" placeholder="Password">
+        <label for="" id="password_error"></label><br><br>
+        <input type="submit" value="Submit" id=submit onclick=return formvalid()>
+        <input type="reset" value="Reset">
+    </form>
+</center>
+<script>
+    function formvalid()
+    var uname=document.getElementById('Username')
+    var pass=document.getElementById('Password')
+    if(uname.value==""){
+      document.getElementById('username_error').innerHTML="*Please enter your username"  
+      document.getElementById('username_error').style.color="red"  
+      document.getElementById('username_error').style.display="block"
+    }
+    else{
+        document.getElementById('username').style.borderColor="black"
+        document.getElementById('password_error').style.display="none"
+        status=1
+    if(pass.value==""){
+        document.getElementById('password').style.borderColor="red"
+        status=0
+        document.getElementById('password_error').innerHTML="*Please Enter Your Gender *"
+        document.getElementById('password_error').style.color="red"
+        document.getElementById('password_error').style.display="block"
+            
+        }
+        else{
+        document.getElementById('password').style.borderColor="black"
+        document.getElementById('password_error').style.display="none"
+        status=1
+        }
+        if(status==0){
+            return false
+        }
+        if(status==1){
+            return true
+        }
+        document.getElementById("submit").onclick = function () {
+        location.href = "static/formvalidation/Homepage.html";
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter a number</label>
+    <input type="text" id="no1">
+    <button onclick="primefunction()">Click</button>
+    <input type="text" id="result">
+
+    <script>
+        function primefunction(){
+            flag=1
+            num=Number(document.getElementById('no1').value)
+        for(i=2;i<num;i++){
+            if(num%i==0){
+                flag=0
+                break
+            }
+            else{
+                flag=1
+
+            }
+        }
+        if(flag==0){
+            document.getElementById('result').value='The number is not aprime'
+        }
+        else{
+            document.getElementById('result').value='The number is prime'
+        }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+        body{
+        background: url("https://tse1.mm.bing.net/th?id=OIP.dSyBt1r2Li7HlazlYMNP9gAAAA&pid=Api&P=0&w=222&h=166");        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        }
+        form{
+            background: linear-gradient(to right,rgb(236, 170, 208),rgb(135, 228, 180));
+            width:40%;
+            height: 950px;
+            font-family: 'Times New Roman', Times, serif;
+            padding-top: 10px;
+            margin-top: 50px;
+            margin-bottom: 400px;
+            border-radius: 20px;
+        }
+        input[type=text],[type=password]{
+            width: 300px;
+            height: 20px;
+            margin: 10px;
+        }
+        input[type=radio],select{
+            margin: 10px;
+        }
+        input[type=submit]{
+            background-color: blue;
+            color: white;
+            width: 150px;
+            height: 30px;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-left: 40px;
+        }
+        input[type=reset]{
+            background-color: green;
+            color: white;
+            width:150px;
+            height: 30px;
+            border-radius: 10px
+
+        }
+        input[type=submit]:hover{
+            background-color: dodgerblue;
+        }
+        input[type=reset]:hover{
+            background-color: red;
+        }
+    </style>
+    </style>
+</head>
+<body>
+ <center>
+        <form>
+            <h1>Signup Here</h1>
+            <label for="">First Name</label>
+            <input type="text" id="firstname" placeholder="First Name" >
+            <label for="" id="fname_error"></label><br><br>
+            <label for="">Last Name</label>
+            <input type="text" id="lastname" placeholder="Last Name">
+            <label for="" id="lname_error"></label><br><br>
+            <label for="">Email Id</label>
+            <input type="text" name="" id="emailid" placeholder="Email Address">
+            <label for="" id="email_error"></label><br><br>
+            <label for="">Phone Number</label>
+            <input type="text" name="" id="phonenumber" placeholder="Phone Number">
+            <label for="" id="phone_error"></label><br><br>
+            <label for="">Address</label>
+            <textarea name="" id="personaladdress" cols="60" rows="3"></textarea>
+            <label for="" id="address_error"></label><br><br>
+            <label for="">State</label>
+            <select name="" id="state">
+              <option value="1">Kerala</option>
+              <option value="2">Tamil Nadu</option>
+              <option value="3">Karnataka</option>
+              <option value="4">Andra Pradesh</option>
+              <option value="5">Goa</option>
+            </select>
+            <label for="" id="state_error"></label><br><br>
+                <label for="birthday">Date of Birth:</label>
+                <input type="date" id="birthday" name="birthday"><br><br>
+                <label for="">Gender</label>
+            <input type="radio" name="gender" id="gender1">Male
+            <input type="radio" name="gender" id="female">Female
+            <input type="radio" name="gender" id="others">Others
+            <label for="" id="gender_error"></label><br><br>
+            <label for="">Password</label>
+        <input type="password" name="" id="password">
+        <label for="" id="password_error"></label><br><br>
+        <label for="">Confirm Password</label>
+        <input type="password" name="" id="confirmpass">
+        <label for="" id="cpassword_error"></label><br>
+        <input type="submit" value="Submit" onclick=return formvalid()>
+        <input type="reset" value="Reset">
+    </form>
+</center>
+    <script>
+           function formvalid(){
+        var fname=document.getElementById('firstname')
+        var lname=document.getElementById('lastname')
+        var email=document.getElementById('emailid')
+        var phone=document.getElementById('phonenumber')
+        var address=document.getElementById('address')
+        var state=document.getElementById('state')
+        var day=document.getElementById('day')
+        var month=document.getElementById('month')
+        var year=document.getElementById('year')
+        var gender=document.getElementById('gender1')
+        var female=document.getElementById('female')
+        var others=document.getElementById('others')
+        var pass=document.getElementById('password')
+        var cpass=document.getElementById('confirmpassword')
+        
+        if(fname.value==""){
+            document.getElementById('fname_error').innerHTML="*Please Enter Your First Name*"
+            document.getElementById('fname_error').style.color="red"
+            document.getElementById('fname_error').style.display="block"
+         
+        }
+        else{
+            document.getElementById('firstname').style.borderColor="black"
+            document.getElementById('fname_error').style.display="none"
+        }
+        if(lname.value==""){
+            document.getElementById('lastname').style.borderColor="red"
+            status=0
+            document.getElementById('lname_error').innerHTML="*Please Enter Your Last Name *"
+            document.getElementById('lname_error').style.color="red"
+            document.getElementById('lname_error').style.display="block"
+           
+        }
+        else{
+            document.getElementById('lastname').style.borderColor="black"
+            document.getElementById('lname_error').style.display="none"
+            status=1
+        }
+        if(email.value==""){
+            document.getElementById('emailid').style.borderColor="red"
+            status=0
+            document.getElementById('email_error').innerHTML="*Please Enter Your Email Id *"
+            document.getElementById('email_error').style.color="red"
+            document.getElementById('email_error').style.display="block"
+            
+        }
+        else{
+            document.getElementById('emailid').style.borderColor="black"
+            document.getElementById('email_error').style.display="none"
+            status=1
+        }
+        if(phone.value==""){
+            document.getElementById('phonenumber').style.borderColor="red"
+            status=0
+            document.getElementById('phone_error').innerHTML="*Please Enter Your Phone Number *"
+            document.getElementById('phone_error').style.color="red"
+            document.getElementById('phone_error').style.display="block"
+            
+        }
+        else{
+            document.getElementById('phonenumber').style.borderColor="black"
+            document.getElementById('phone_error').style.display="none"
+            status=1
+        }
+        if(address.length==""){
+            document.getElementById('personaladdress').style.borderColor="red"
+            status=0
+            document.getElementById('address_error').innerHTML="*Please Enter Your Address *"
+            document.getElementById('address_error').style.color="red"
+            document.getElementById('address_error').style.display="block"
+            
+        }
+        else{
+            document.getElementById('personaladdress').style.borderColor="black"
+            document.getElementById('address_error').style.display="none"
+            status=1
+        }
+        if(state.value==""){
+            document.getElementById('state').style.borderColor="red"
+            status=0
+            document.getElementById('state_error').innerHTML="*Please Enter Your State *"
+            document.getElementById('state_error').style.color="red"
+            document.getElementById('state_error').style.display="block"
+            
+        }
+        else{
+            document.getElementById('state').style.borderColor="black"
+            document.getElementById('state_error').style.display="none"
+            status=1
+        }
+        if(day.value==""){
+            document.getElementById('day').style.borderColor="red"
+            status=0
+            document.getElementById('day_error').innerHTML="*Please Enter Your Date Of Birth *"
+            document.getElementById('day_error').style.color="red"
+            document.getElementById('day_error').style.display="block"
+            
+        }
+        else{
+            document.getElementById('day').style.borderColor="black"
+            document.getElementById('day_error').style.display="none"
+            status=1
+        }
+        if(month.value==""){
+            document.getElementById('month').style.borderColor="red"
+            status=0
+        }
+        else{
+            document.getElementById('month').style.borderColor="black"
+            status=1
+        }
+        if(year.value==""){
+            document.getElementById('year').style.borderColor="red"
+            status=0
+        }
+        else{
+            document.getElementById('year').style.borderColor="black"
+            status=1
+        }
+        if(gender.value==""){
+            document.getElementById('gender1').style.borderColor="red"
+            status=0
+            document.getElementById('gender_error').innerHTML="*Please Enter Your Gender *"
+            document.getElementById('gender_error').style.color="red"
+            document.getElementById('gender_error').style.display="block"
+            
+        }
+        else{
+            document.getElementById('gender1').style.borderColor="black"
+            document.getElementById('gender_error').style.display="none"
+            status=1
+        }
+        if(gender.value==""){
+            document.getElementById('gender1').style.borderColor="red"
+            status=0
+            document.getElementById('gender_error').innerHTML="*Please Enter Your Gender *"
+            document.getElementById('gender_error').style.color="red"
+            document.getElementById('gender_error').style.display="block"
+            
+        }
+        else{
+            document.getElementById('gender1').style.borderColor="black"
+            document.getElementById('gender_error').style.display="none"
+            status=1
+        }
+        if(female.value==""){
+            document.getElementById('female').style.borderColor="red"
+            status=0
+        }
+        else{
+            document.getElementById('female').style.borderColor="black"
+            status=1
+        }
+        if(others.value==""){
+            document.getElementById('others').style.borderColor="red"
+            status=0
+        }
+        else{
+            document.getElementById('others').style.borderColor="black"
+            status=1
+        }
+        if(pass.value==""){
+            document.getElementById('password').style.borderColor="red"
+            status=0
+            document.getElementById('password_error').innerHTML="*Please Enter Your Gender *"
+            document.getElementById('password_error').style.color="red"
+            document.getElementById('password_error').style.display="block"
+            
+        }
+        else{
+            document.getElementById('password').style.borderColor="black"
+            document.getElementById('password_error').style.display="none"
+            status=1
+        }
+        if(cpass.value==""){
+            document.getElementById('confirmpass').style.borderColor="red"
+            status=0
+            document.getElementById('cpassword_error').innerHTML="*Please Enter Your Gender *"
+            document.getElementById('cpassword_error').style.color="red"
+            document.getElementById('cpassword_error').style.display="block"
+            
+        }
+        else{
+            document.getElementById('confirmpass').style.borderColor="black"
+            document.getElementById('cpassword_error').style.display="none"
+            status=1
+        }
+
+        if(status==0){
+            return false
+        }
+        if(status==1){
+            return true
+        }
+      }
+
+    </script>
+</body>
+</html>

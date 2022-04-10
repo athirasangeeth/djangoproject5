@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <div style="background-color: rgb(75, 166, 182);height: 500px;width: 500px;">
+    <h1>Largest number among three numbers</h1>
+    <label>Enter Number 1</label>
+    <input type="text" id="no1"><br>
+    <label>Enter Number 2</label>
+    <input type="text" id="no2"><br>
+    <label>Enter Number 3</label>
+    <input type="text" id="no3"><br>
+    <button onclick="largest()">Largest</button><br>
+    <label>Largest Number</label>
+    <input type="text" id="result">
+</div>
+</center>
+    <script>
+        function largest()
+        {
+        num1 = Number(document.getElementById("no1").value);
+        console.log(num1)
+        num2 = Number(document.getElementById("no2").value);
+        console.log(num2)
+        num3 = Number(document.getElementById("no3").value);
+        console.log(num3)
+        
+        if(num1>num2 && num1>num3){
+            console.log('largest numer is %d',num1)
+            document.getElementById('result').value=num1
+        }
+        else if(num1<num2 && num2>num3){
+            console.log('largest number is %d',num2)
+            document.getElementById('result').value=num2
+        }
+        else if(num1<num2 && num2<num3){
+            console.log('Largest number is %d',num3)
+            document.getElementById('result').value=num3
+        }
+        }
+    </script>
+</body>
+</html>

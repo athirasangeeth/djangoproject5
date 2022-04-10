@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="no1">
+    <button onclick="agefunction()">Click</button>
+    <script>
+    function agefunction(){
+        age=Number(document.getElementById('no1').value);
+    }
+    if(age<10){
+        document.write("<p> your age is less than 10 </p>")
+    }
+    else if(age<20){
+        document.write("<p> your age is less than 20 </p>")
+    }
+    else if(age<30){
+        document.write("<p> your age is less than 30 </p>")
+    }
+    else if(age<40){
+        document.write("<p> your age is less than 40 </p>")
+    }
+    else if(age<50){
+        document.write("<p> your age is less than 50 </p>")
+    }
+    else{
+        document.write("<p> your age is greater than 50 </p>")
+    }
+</script>
+</body>
+</html>

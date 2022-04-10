@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label> User Name</label>
+    <input type="text" id="username" onkeyup="return validation()">
+    <label for="" id="username_error"></label>
+    <br>
+    <label>Password</label>
+    <input type="text" id="Password">
+    <label for="" id="password_error"></label>
+    <br>
+    <button onclick="return validation()">Login</button><br>
+<script>
+    function validation(){
+        // console.log('heloo')
+        status=1
+        user=document.getElementById('username')
+        // console.log(user)
+        pass=document.getElementById('password').value
+        // console.log(pass)
+        if(user.value == ""){
+            username.style.borderColor="red"
+            // username_error.innerHTML="Please enter your username"
+            document.getElementById('username_error').innerHTML="Please enter your username"
+            // username_error.style.color="red"
+            document.getElementById('username').style.borderColor="red"
+            username_error.style.color="red"
+            username_error.style.display="block"
+            status=0
+        }
+        else{
+            username.style.borderColor="black"
+            username_error.style.display="block"
+            status=1
+        }
+        if(pass==""){
+            password.style.borderColor="red"
+            document.getElementById('password_error').innerHTML="Please Enter password"
+            document.getElementById('password').style.borderColor="red"
+            paaword_error.style.display="block"
+            status=0
+        }
+        else{
+            password.style.borderColor="black"
+            password_error.style.display="none"
+            status=1
+        }
+        if(status==0){
+        return false
+    }
+    else if(status==1){
+        return true
+    }
+
+    }
+</script>
+</body>
+</html>

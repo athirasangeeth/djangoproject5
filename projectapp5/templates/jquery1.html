@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <img src="images/image1.jpg" id='image' alt="">
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta sunt iusto tempora quis expedita ad sed id iure, at, earum eos ipsa delectus quam accusantium, est molestias totam. A, quo!</p>
+    <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic officiis mollitia ipsa. Officiis modi excepturi ratione laudantium fuga minima voluptatum? Reiciendis laborum nesciunt, molestias ipsum aliquid error consectetur adipisci delectus.</p>
+    <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint repellendus temporibus qui. Culpa quo exercitationem illo sapiente quasi facilis unde nobis quos dolor. Possimus odio deleniti molestiae sapiente nostrum molestias.</p>
+    <button id="btn">click</button>
+    <script>
+        $(document).ready(function(){
+            // $('#btn').click(function(){
+            //     $('p').hide(function(){
+            //         alert('New Para')
+            //     })
+            // })
+            // $('p').click(function(){
+            //     $(this).hide()
+            // })
+            // $('#btn').click(function(){
+            //     if($('#p1').hide()){
+            //     $('#p1').show()
+            //     }
+            // })
+            $('#btn').click(function(){
+                $('#image').toggle()
+            })
+        })
+    </script>
+</body>
+</html>
